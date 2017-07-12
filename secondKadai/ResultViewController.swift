@@ -9,17 +9,24 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-
+    
+    @IBOutlet weak var label: UILabel!
+    
+    var outName = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        label.text = "こんにちは\(outName)さん"
+        
         // Do any additional setup after loading the view.
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,38 +19,51 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名前を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkl-vy-7PZ">
-                                <rect key="frame" x="30" y="40" width="315" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkl-vy-7PZ">
+                                <rect key="frame" x="112" y="45" width="191" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZM-oE-hod">
-                                <rect key="frame" x="164" y="186" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fow-8G-Evl">
+                                <rect key="frame" x="131" y="156" width="152" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="K7n-8F-gH3"/>
+                                    <constraint firstAttribute="width" constant="152" id="hk8-We-cxz"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZM-oE-hod">
+                                <rect key="frame" x="192" y="300" width="31" height="30"/>
                                 <state key="normal" title="進む"/>
                                 <connections>
                                     <segue destination="9gT-TL-7fl" kind="show" id="1K3-R3-MmV"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fow-8G-Evl">
-                                <rect key="frame" x="89" y="93" width="196" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NZM-oE-hod" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9OW-AN-sgb"/>
+                            <constraint firstItem="xkl-vy-7PZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24.5" id="dMY-rf-362"/>
+                            <constraint firstItem="fow-8G-Evl" firstAttribute="top" secondItem="xkl-vy-7PZ" secondAttribute="bottom" constant="90" id="gCe-5F-XqQ"/>
+                            <constraint firstItem="NZM-oE-hod" firstAttribute="top" secondItem="fow-8G-Evl" secondAttribute="bottom" constant="114" id="nU9-JT-faz"/>
+                            <constraint firstItem="fow-8G-Evl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yRg-24-4Ml"/>
+                            <constraint firstItem="xkl-vy-7PZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zcs-Bq-gLF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inName" destination="fow-8G-Evl" id="Dcn-co-tzB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="125.4872563718141"/>
+            <point key="canvasLocation" x="139.13043478260872" y="124.72826086956523"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="ILq-0k-jiB">
@@ -60,20 +74,41 @@
                         <viewControllerLayoutGuide type="bottom" id="Hff-pw-DC1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HJW-xN-9Mg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMP-bJ-KnA">
-                                <rect key="frame" x="164" y="182" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="戻る"/>
-                                <connections>
-                                    <segue destination="GWA-q6-9jX" kind="unwind" unwindAction="unwind:" id="oou-WE-Ndw"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkI-3p-gfn">
+                                <rect key="frame" x="186" y="61" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yDL-05-cQg">
+                                <rect key="frame" x="192" y="147" width="31" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMP-bJ-KnA">
+                                        <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
+                                        <state key="normal" title="戻る"/>
+                                        <connections>
+                                            <segue destination="GWA-q6-9jX" kind="unwind" unwindAction="unwind:" id="oou-WE-Ndw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JMP-bJ-KnA" firstAttribute="top" secondItem="yDL-05-cQg" secondAttribute="topMargin" constant="20" id="9fe-GX-uzP"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yDL-05-cQg" firstAttribute="centerX" secondItem="HJW-xN-9Mg" secondAttribute="centerX" id="FDs-FS-DSM"/>
+                            <constraint firstItem="hkI-3p-gfn" firstAttribute="centerX" secondItem="HJW-xN-9Mg" secondAttribute="centerX" id="WLy-KF-tzI"/>
+                            <constraint firstItem="hkI-3p-gfn" firstAttribute="top" secondItem="dvl-8L-D8O" secondAttribute="bottom" constant="41" id="gSR-wT-kCF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="hkI-3p-gfn" id="uaJ-4s-n7l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yb3-w5-3f7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="GWA-q6-9jX" userLabel="Exit" sceneMemberID="exit"/>
